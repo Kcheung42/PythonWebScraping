@@ -6,9 +6,11 @@
 #    By: kcheung <kcheung@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/11 18:27:17 by kcheung           #+#    #+#              #
-#    Updated: 2018/01/11 20:57:32 by kcheung          ###   ########.fr        #
+#    Updated: 2018/01/21 16:30:39 by kcheung          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+#!/bin/python
 
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
@@ -17,9 +19,10 @@ import threading
 import logging
 import re
 
-logging.basicConfig(filename='debug.log',level=logging.DEBUG,
-					format='[%(levelname)s] (%(threadName) - 10s) %(message)s',
-					)
+logging.basicConfig(
+		filename='debug.log',level=logging.DEBUG,
+		format='[%(levelname)s] (%(threadName) - 10s) %(message)s',
+		)
 visited = set()
 q = Queue()
 filename = 'All_links.txt'

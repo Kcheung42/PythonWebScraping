@@ -6,7 +6,7 @@
 #    By: kcheung <kcheung@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/11 18:10:01 by kcheung           #+#    #+#              #
-#    Updated: 2018/01/11 18:10:06 by kcheung          ###   ########.fr        #
+#    Updated: 2018/01/16 17:22:52 by kcheung          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ index_html = uReq('https://coinmarketcap.com/all/views/all/').read()
 index_soup = soup(index_html, "html.parser")
 containers = index_soup.findAll("a", {"class" : "currency-name-container"})
 links = []
-for container in containers:
+for container in containers:  ## store all links in links[] array
 	links.append(container['href'])
 
 
